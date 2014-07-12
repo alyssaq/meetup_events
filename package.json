@@ -1,0 +1,11 @@
+{
+  "name": "meetup_events",
+  "version": "0.0.1",
+  "description": "Meetup events in your country",
+  "main": "index.js",
+  "author": "Alyssa Quek",
+  "license": "MIT",
+  "dependencies": {
+    "promise": "^5.0.0"
+  }
+}

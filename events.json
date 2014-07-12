@@ -1,0 +1,194 @@
+[
+  {
+    "time": "2014-07-16T11:15:00.000Z",
+    "id": "193467102",
+    "name": "DataScience SG Meetup - HR Analytics",
+    "group_name": "DataScience SG",
+    "group_url": "http://www.meetup.com/DataScience-SG-Singapore/",
+    "url": "http://meetup.com/DataScience-SG-Singapore/events/193467102"
+  },
+  {
+    "time": "2014-07-14T10:45:00.000Z",
+    "id": "193625622",
+    "name": "Technical workshop - Revolution Analytics and Cloudera",
+    "group_name": "R User Group - Singapore (RUGS)",
+    "group_url": "http://www.meetup.com/R-User-Group-SG/",
+    "url": "http://meetup.com/R-User-Group-SG/events/193625622"
+  },
+  {
+    "time": "2014-07-15T11:00:00.000Z",
+    "id": "192768632",
+    "name": "July Meetup",
+    "group_name": "Singapore Ruby Group",
+    "group_url": "http://www.meetup.com/Singapore-Ruby-Group/",
+    "url": "http://meetup.com/Singapore-Ruby-Group/events/192768632"
+  },
+  {
+    "time": "2014-07-29T06:00:00.000Z",
+    "id": "194446172",
+    "name": "Coding Dojo: Legacy Code (C# and Java)",
+    "group_name": "Agile Singapore",
+    "group_url": "http://www.meetup.com/Agile-Singapore/",
+    "url": "http://meetup.com/Agile-Singapore/events/194446172"
+  },
+  {
+    "time": "2014-07-22T11:00:00.000Z",
+    "id": "190871092",
+    "name": "Learning Meteor Together SG - Discover Meteor Meetup #2",
+    "group_name": "Meteor Singapore",
+    "group_url": "http://www.meetup.com/Meteor-Singapore/",
+    "url": "http://meetup.com/Meteor-Singapore/events/190871092"
+  },
+  {
+    "time": "2014-07-15T11:00:00.000Z",
+    "id": "188059562",
+    "name": "GoSG July Meetup",
+    "group_name": "GoSG",
+    "group_url": "http://www.meetup.com/golangsg/",
+    "url": "http://meetup.com/golangsg/events/188059562"
+  },
+  {
+    "time": "2014-07-17T11:00:00.000Z",
+    "id": "192152092",
+    "name": "July meetup",
+    "group_name": "Bitcoin Singapore Meetup Group",
+    "group_url": "http://www.meetup.com/BitcoinSingapore/",
+    "url": "http://meetup.com/BitcoinSingapore/events/192152092"
+  },
+  {
+    "time": "2014-09-10T09:45:00.000Z",
+    "id": "194311362",
+    "name": "Code lab - Node/express ( Beginner  to Advanced)",
+    "group_name": "Singapore NEAN developer Group (JS)",
+    "group_url": "http://www.meetup.com/NEAN-Singapore-Meetup/",
+    "url": "http://meetup.com/NEAN-Singapore-Meetup/events/194311362"
+  },
+  {
+    "time": "2014-07-27T02:00:00.000Z",
+    "id": "193644092",
+    "name": "NodeSchool Singapore II",
+    "group_name": "SingaporeJS",
+    "group_url": "http://www.meetup.com/Singapore-JS/",
+    "url": "http://meetup.com/Singapore-JS/events/193644092"
+  },
+  {
+    "time": "2014-07-22T10:30:00.000Z",
+    "id": "192318202",
+    "name": "July Meetup",
+    "group_name": "Singapore Salesforce Developer Group",
+    "group_url": "http://www.meetup.com/Singapore-Salesforce-Developer-Group/",
+    "url": "http://meetup.com/Singapore-Salesforce-Developer-Group/events/192318202"
+  },
+  {
+    "time": "2014-07-29T11:00:00.000Z",
+    "id": "193332932",
+    "name": "UX Book Club July 2014: Prototyping - A Practitioner's Guide",
+    "group_name": "IxDA Singapore",
+    "group_url": "http://www.meetup.com/IxDA-Singapore/",
+    "url": "http://meetup.com/IxDA-Singapore/events/193332932"
+  },
+  {
+    "time": "2014-08-20T11:00:00.000Z",
+    "id": "192538552",
+    "name": "NetEng meetup on IGP's",
+    "group_name": "Singapore Network Engineering Meetup",
+    "group_url": "http://www.meetup.com/Singapore-Network-Engineering-Meetup/",
+    "url": "http://meetup.com/Singapore-Network-Engineering-Meetup/events/192538552"
+  },
+  {
+    "time": "2014-07-17T10:00:00.000Z",
+    "id": "192817812",
+    "name": "feedback from June's webRTC events in USA.",
+    "group_name": "Singapore WebRTC Meetup",
+    "group_url": "http://www.meetup.com/Singapore-WebRTC-Meetup/",
+    "url": "http://meetup.com/Singapore-WebRTC-Meetup/events/192817812"
+  },
+  {
+    "time": "2014-07-24T10:30:00.000Z",
+    "id": "193636402",
+    "name": "Postgres Meetup - July",
+    "group_name": "PUGS (Postgres Users Group Singapore)",
+    "group_url": "http://www.meetup.com/PUGS-Postgres-Users-Group-Singapore/",
+    "url": "http://meetup.com/PUGS-Postgres-Users-Group-Singapore/events/193636402"
+  },
+  {
+    "time": "2014-08-05T11:00:00.000Z",
+    "id": "187134762",
+    "name": "Meet and Greet",
+    "group_name": "Swift Singapore",
+    "group_url": "http://www.meetup.com/Swift-Singapore/",
+    "url": "http://meetup.com/Swift-Singapore/events/187134762"
+  },
+  {
+    "time": "2014-07-26T05:00:00.000Z",
+    "id": "193896182",
+    "name": "Introduction to Python Tutorial",
+    "group_name": "PyLadies SG",
+    "group_url": "http://www.meetup.com/PyLadies-SG/",
+    "url": "http://meetup.com/PyLadies-SG/events/193896182"
+  },
+  {
+    "time": "2014-11-28T11:00:00.000Z",
+    "id": "111422882",
+    "name": "Hackathon Firefox OS",
+    "group_name": "HTML5Rocks@SG",
+    "group_url": "http://www.meetup.com/HTML5Rocks-SG/",
+    "url": "http://meetup.com/HTML5Rocks-SG/events/111422882"
+  },
+  {
+    "time": "2014-07-31T10:30:00.000Z",
+    "id": "193806862",
+    "name": "ARR and WAP - the good, bad and ugly.",
+    "group_name": "Singapore Lync User Group",
+    "group_url": "http://www.meetup.com/Singapore-Lync-User-Group/",
+    "url": "http://meetup.com/Singapore-Lync-User-Group/events/193806862"
+  },
+  {
+    "time": "2014-08-11T11:00:00.000Z",
+    "id": "188358802",
+    "name": "Lets meet up in August baby !!",
+    "group_name": "Singapore Rasp Pi Enthusiasts",
+    "group_url": "http://www.meetup.com/Singapore-Raspberry-Pi-Enthusiasts-meetup/",
+    "url": "http://meetup.com/Singapore-Raspberry-Pi-Enthusiasts-meetup/events/188358802"
+  },
+  {
+    "time": "2014-07-18T11:00:00.000Z",
+    "id": "194124962",
+    "name": "BATS Honeypot Deployment Project",
+    "group_name": "BAT (beer and tech)",
+    "group_url": "http://www.meetup.com/BAT-beer-and-tech/",
+    "url": "http://meetup.com/BAT-beer-and-tech/events/194124962"
+  },
+  {
+    "time": "2014-07-23T11:00:00.000Z",
+    "id": "177653722",
+    "name": "Singapore FileMaker Group July Meeting",
+    "group_name": "Singapore FileMaker Group",
+    "group_url": "http://www.meetup.com/Singapore-FileMaker/",
+    "url": "http://meetup.com/Singapore-FileMaker/events/177653722"
+  },
+  {
+    "time": "2014-09-23T10:00:00.000Z",
+    "id": "183470402",
+    "name": "First Ever TADMeetup Singapore",
+    "group_name": "TADMeetup Singapore",
+    "group_url": "http://www.meetup.com/TADMeetup-Singapore/",
+    "url": "http://meetup.com/TADMeetup-Singapore/events/183470402"
+  },
+  {
+    "time": "2014-07-26T02:00:00.000Z",
+    "id": "186613962",
+    "name": "Learn how to start a digital wallet",
+    "group_name": "Singapore Crypto-Currency Community",
+    "group_url": "http://www.meetup.com/Singapore-Crypto-Currency-Community/",
+    "url": "http://meetup.com/Singapore-Crypto-Currency-Community/events/186613962"
+  },
+  {
+    "time": "2014-07-24T01:00:00.000Z",
+    "id": "192382432",
+    "name": "One Day Conference on DevOps",
+    "group_name": "Singapore Cloud, Big Data, DevOps Meetups",
+    "group_url": "http://www.meetup.com/Singapore-Cloud-Big-Data-DevOps-Meetups/",
+    "url": "http://meetup.com/Singapore-Cloud-Big-Data-DevOps-Meetups/events/192382432"
+  }
+]
