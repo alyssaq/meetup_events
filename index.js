@@ -47,7 +47,6 @@ function saveEvents(arr, row) {
   entry.group_name = row.name;
   entry.group_url = row.link;
   entry.url = 'http://meetup.com/' + row.urlname + '/events/' + entry.id;
-  entry.time = new Date(entry.time).toISOString();
   entry.formatted_time = moment(new Date(entry.time)).format('DD MMM, ddd, h:mm a');
   events.push(entry);
   console.log(entry.group_name + ' -- ' + entry.name + ' - ' + entry.url);
@@ -61,14 +60,23 @@ function saveToJson(data) {
   console.log('JSON file saved at: ' + config.outfile)
 }
 
-https_get_json('https://www.meetup.com/muapi/find/groups?' + meetupQuery)
-  .then(function(data) {
-    events = [];
-    data
-      .filter(isValidGroup)
-      .reduce(saveEvents, events);
-    saveToJson(events);
-  })
-  .catch(function(err) {
-    console.error(err);
-  })
+function getMeetupEvents() {
+  return new Promise(function (resolve, reject) {
+    https_get_json('https://www.meetup.com/muapi/find/groups?' + meetupQuery)
+    .then(function(data) {
+      events = [];
+      data
+        .filter(isValidGroup)
+        .reduce(saveEvents, events);
+      saveToJson(events);
+      resolve(events);
+    })
+    .catch(function(err) {
+      console.error(err);
+      reject(err);
+    })
+  });
+}
+
+module.exports.getMeetupEvents = getMeetupEvents;
+getMeetupEvents();

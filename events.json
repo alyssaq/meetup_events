@@ -1,6 +1,6 @@
 [
   {
-    "time": "2014-07-16T11:15:00.000Z",
+    "time": 1405509300000,
     "id": "193467102",
     "name": "DataScience SG Meetup - HR Analytics",
     "group_name": "DataScience SG",
@@ -9,7 +9,7 @@
     "formatted_time": "16 Jul, Wed, 7:15 pm"
   },
   {
-    "time": "2014-07-14T10:45:00.000Z",
+    "time": 1405334700000,
     "id": "193625622",
     "name": "Technical workshop - Revolution Analytics and Cloudera",
     "group_name": "R User Group - Singapore (RUGS)",
@@ -18,7 +18,7 @@
     "formatted_time": "14 Jul, Mon, 6:45 pm"
   },
   {
-    "time": "2014-07-15T11:00:00.000Z",
+    "time": 1405422000000,
     "id": "192768632",
     "name": "July Meetup",
     "group_name": "Singapore Ruby Group",
@@ -27,7 +27,7 @@
     "formatted_time": "15 Jul, Tue, 7:00 pm"
   },
   {
-    "time": "2014-07-29T06:00:00.000Z",
+    "time": 1406613600000,
     "id": "194446172",
     "name": "Coding Dojo: Legacy Code (C# and Java)",
     "group_name": "Agile Singapore",
@@ -36,7 +36,7 @@
     "formatted_time": "29 Jul, Tue, 2:00 pm"
   },
   {
-    "time": "2014-07-22T11:00:00.000Z",
+    "time": 1406026800000,
     "id": "190871092",
     "name": "Learning Meteor Together SG - Discover Meteor Meetup #2",
     "group_name": "Meteor Singapore",
@@ -45,7 +45,7 @@
     "formatted_time": "22 Jul, Tue, 7:00 pm"
   },
   {
-    "time": "2014-07-15T11:00:00.000Z",
+    "time": 1405422000000,
     "id": "188059562",
     "name": "GoSG July Meetup",
     "group_name": "GoSG",
@@ -54,7 +54,7 @@
     "formatted_time": "15 Jul, Tue, 7:00 pm"
   },
   {
-    "time": "2014-07-17T11:00:00.000Z",
+    "time": 1405594800000,
     "id": "192152092",
     "name": "July meetup",
     "group_name": "Bitcoin Singapore Meetup Group",
@@ -63,7 +63,7 @@
     "formatted_time": "17 Jul, Thu, 7:00 pm"
   },
   {
-    "time": "2014-09-10T09:45:00.000Z",
+    "time": 1410342300000,
     "id": "194311362",
     "name": "Code lab - Node/express ( Beginner  to Advanced)",
     "group_name": "Singapore NEAN developer Group (JS)",
@@ -72,16 +72,16 @@
     "formatted_time": "10 Sep, Wed, 5:45 pm"
   },
   {
-    "time": "2014-07-27T02:00:00.000Z",
-    "id": "193644092",
-    "name": "NodeSchool Singapore II",
+    "time": 1406354400000,
+    "id": "194480262",
+    "name": "Become a mentor for NodeSchool Singapore II",
     "group_name": "SingaporeJS",
     "group_url": "http://www.meetup.com/Singapore-JS/",
-    "url": "http://meetup.com/Singapore-JS/events/193644092",
-    "formatted_time": "27 Jul, Sun, 10:00 am"
+    "url": "http://meetup.com/Singapore-JS/events/194480262",
+    "formatted_time": "26 Jul, Sat, 2:00 pm"
   },
   {
-    "time": "2014-07-22T10:30:00.000Z",
+    "time": 1406025000000,
     "id": "192318202",
     "name": "July Meetup",
     "group_name": "Singapore Salesforce Developer Group",
@@ -90,7 +90,7 @@
     "formatted_time": "22 Jul, Tue, 6:30 pm"
   },
   {
-    "time": "2014-07-29T11:00:00.000Z",
+    "time": 1406631600000,
     "id": "193332932",
     "name": "UX Book Club July 2014: Prototyping - A Practitioner's Guide",
     "group_name": "IxDA Singapore",
@@ -99,7 +99,7 @@
     "formatted_time": "29 Jul, Tue, 7:00 pm"
   },
   {
-    "time": "2014-08-20T11:00:00.000Z",
+    "time": 1408532400000,
     "id": "192538552",
     "name": "NetEng meetup on IGP's",
     "group_name": "Singapore Network Engineering Meetup",
@@ -108,7 +108,7 @@
     "formatted_time": "20 Aug, Wed, 7:00 pm"
   },
   {
-    "time": "2014-07-17T10:00:00.000Z",
+    "time": 1405591200000,
     "id": "192817812",
     "name": "feedback from June's webRTC events in USA.",
     "group_name": "Singapore WebRTC Meetup",
@@ -117,7 +117,7 @@
     "formatted_time": "17 Jul, Thu, 6:00 pm"
   },
   {
-    "time": "2014-07-24T10:30:00.000Z",
+    "time": 1406197800000,
     "id": "193636402",
     "name": "Postgres Meetup - July",
     "group_name": "PUGS (Postgres Users Group Singapore)",
@@ -126,7 +126,7 @@
     "formatted_time": "24 Jul, Thu, 6:30 pm"
   },
   {
-    "time": "2014-08-05T11:00:00.000Z",
+    "time": 1407236400000,
     "id": "187134762",
     "name": "Meet and Greet",
     "group_name": "Swift Singapore",
@@ -135,7 +135,7 @@
     "formatted_time": "05 Aug, Tue, 7:00 pm"
   },
   {
-    "time": "2014-07-26T05:00:00.000Z",
+    "time": 1406350800000,
     "id": "193896182",
     "name": "Introduction to Python Tutorial",
     "group_name": "PyLadies SG",
@@ -144,7 +144,7 @@
     "formatted_time": "26 Jul, Sat, 1:00 pm"
   },
   {
-    "time": "2014-11-28T11:00:00.000Z",
+    "time": 1417172400000,
     "id": "111422882",
     "name": "Hackathon Firefox OS",
     "group_name": "HTML5Rocks@SG",
@@ -153,7 +153,7 @@
     "formatted_time": "28 Nov, Fri, 7:00 pm"
   },
   {
-    "time": "2014-07-31T10:30:00.000Z",
+    "time": 1406802600000,
     "id": "193806862",
     "name": "ARR and WAP - the good, bad and ugly.",
     "group_name": "Singapore Lync User Group",
@@ -162,7 +162,7 @@
     "formatted_time": "31 Jul, Thu, 6:30 pm"
   },
   {
-    "time": "2014-08-11T11:00:00.000Z",
+    "time": 1407754800000,
     "id": "188358802",
     "name": "Lets meet up in August baby !!",
     "group_name": "Singapore Rasp Pi Enthusiasts",
@@ -171,7 +171,7 @@
     "formatted_time": "11 Aug, Mon, 7:00 pm"
   },
   {
-    "time": "2014-07-18T11:00:00.000Z",
+    "time": 1405681200000,
     "id": "194124962",
     "name": "BATS Honeypot Deployment Project",
     "group_name": "BAT (beer and tech)",
@@ -180,7 +180,7 @@
     "formatted_time": "18 Jul, Fri, 7:00 pm"
   },
   {
-    "time": "2014-07-23T11:00:00.000Z",
+    "time": 1406113200000,
     "id": "177653722",
     "name": "Singapore FileMaker Group July Meeting",
     "group_name": "Singapore FileMaker Group",
@@ -189,7 +189,7 @@
     "formatted_time": "23 Jul, Wed, 7:00 pm"
   },
   {
-    "time": "2014-09-23T10:00:00.000Z",
+    "time": 1411466400000,
     "id": "183470402",
     "name": "First Ever TADMeetup Singapore",
     "group_name": "TADMeetup Singapore",
@@ -198,7 +198,7 @@
     "formatted_time": "23 Sep, Tue, 6:00 pm"
   },
   {
-    "time": "2014-07-26T02:00:00.000Z",
+    "time": 1406340000000,
     "id": "186613962",
     "name": "Learn how to start a digital wallet",
     "group_name": "Singapore Crypto-Currency Community",
@@ -207,7 +207,7 @@
     "formatted_time": "26 Jul, Sat, 10:00 am"
   },
   {
-    "time": "2014-07-24T01:00:00.000Z",
+    "time": 1406163600000,
     "id": "192382432",
     "name": "One Day Conference on DevOps",
     "group_name": "Singapore Cloud, Big Data, DevOps Meetups",
