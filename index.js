@@ -6,7 +6,8 @@ var moment = require('moment');
 var config = require('./config');
 
 function https_get_json(url) {
- return new Promise(function (resolve, reject) {
+  console.log('Getting data from ' + url);
+  return new Promise(function (resolve, reject) {
     https.get(url, function (res) {
       var buffer = [];
       res.on('data', Array.prototype.push.bind(buffer));
@@ -59,13 +60,15 @@ function saveToJson(data) {
 }
 
 function getAllMeetupEvents() { //regardless of venue
-  var url = 'https://www.meetup.com/muapi/find/groups?' +
+  var url = 'https://api.meetup.com/2/groups?' +
     querystring.stringify(config.meetupParams);
   return https_get_json(url).then(function(data) {
+    console.log('Fetched ' + data.results.length + ' rows');
     events = [];
-    data
+    data.results
       .filter(isValidGroup)
       .reduce(saveEvents, events);
+    console.log('Fetched ' + events.length + ' events');
     return events;
   });
 }
@@ -84,6 +87,7 @@ function getMeetupEvents() { //events with venues
         return venues[i].hasOwnProperty('venue') ||
           venues[i].venue_visibility === 'members';
       });
+      console.log(eventsWithVenues.length + ' events with venues');
       saveToJson(eventsWithVenues);
       return eventsWithVenues;
     });
