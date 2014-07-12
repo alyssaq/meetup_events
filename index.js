@@ -33,7 +33,7 @@ function isValidGroup(row) {
   var blacklistWords = config.blacklistWords || [];
   var blacklistRE = new RegExp(blacklistWords.join('|'), 'i');
 
-  // enfore country filter. Meetup adds JB groups into SG
+  // Enforce country filter. Meetup adds JB groups into SG
   return blacklistWords.length === 0 ? true : !row.name.match(blacklistRE) &&
          !blacklistGroups.some(function(id) { return row.id === id })
          && row.country === (config.meetupParams.country || row.country);
