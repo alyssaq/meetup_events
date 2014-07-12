@@ -5,8 +5,6 @@ var jf = require('jsonfile');
 var moment = require('moment');
 var config = require('./config');
 
-var meetupQuery = querystring.stringify(config.meetupParams);
-
 function https_get_json(url) {
  return new Promise(function (resolve, reject) {
     https.get(url, function (res) {
@@ -49,7 +47,7 @@ function saveEvents(arr, row) {
   entry.url = 'http://meetup.com/' + row.urlname + '/events/' + entry.id;
   entry.formatted_time = moment(new Date(entry.time)).format('DD MMM, ddd, h:mm a');
   events.push(entry);
-  console.log(entry.group_name + ' -- ' + entry.name + ' - ' + entry.url);
+  //console.log(entry.group_name + ' -- ' + entry.name + ' - ' + entry.url);
 }
 
 function saveToJson(data) {
@@ -60,23 +58,37 @@ function saveToJson(data) {
   console.log('JSON file saved at: ' + config.outfile)
 }
 
-function getMeetupEvents() {
-  return new Promise(function (resolve, reject) {
-    https_get_json('https://www.meetup.com/muapi/find/groups?' + meetupQuery)
-    .then(function(data) {
-      events = [];
-      data
-        .filter(isValidGroup)
-        .reduce(saveEvents, events);
-      saveToJson(events);
-      resolve(events);
-    })
-    .catch(function(err) {
-      console.error(err);
-      reject(err);
-    })
+function getAllMeetupEvents() { //regardless of venue
+  var url = 'https://www.meetup.com/muapi/find/groups?' +
+    querystring.stringify(config.meetupParams);
+  return https_get_json(url).then(function(data) {
+    events = [];
+    data
+      .filter(isValidGroup)
+      .reduce(saveEvents, events);
+    return events;
   });
 }
 
-module.exports.getMeetupEvents = getMeetupEvents;
+function getMeetupEvents() { //events with venues
+  return getAllMeetupEvents().then(function(events) {
+    var venues = events.map(function(event) {
+      return https_get_json('https://api.meetup.com/2/event/' + event.id + '?only=venue&key=' + config.meetupParams.key);
+    });
+
+    return Promise.all(venues).then(function(venues) {
+      var eventsWithVenues = events.filter(function(event, i) {
+        return venues[i].hasOwnProperty('venue');
+      });
+      saveToJson(eventsWithVenues);
+      return eventsWithVenues;
+    });
+  });
+}
+
+module.exports = {
+  getAllMeetupEvents: getAllMeetupEvents,
+  getMeetupEvents: getMeetupEvents
+}
+
 getMeetupEvents();

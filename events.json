@@ -63,15 +63,6 @@
     "formatted_time": "17 Jul, Thu, 7:00 pm"
   },
   {
-    "time": 1410342300000,
-    "id": "194311362",
-    "name": "Code lab - Node/express ( Beginner  to Advanced)",
-    "group_name": "Singapore NEAN developer Group (JS)",
-    "group_url": "http://www.meetup.com/NEAN-Singapore-Meetup/",
-    "url": "http://meetup.com/NEAN-Singapore-Meetup/events/194311362",
-    "formatted_time": "10 Sep, Wed, 5:45 pm"
-  },
-  {
     "time": 1406354400000,
     "id": "194480262",
     "name": "Become a mentor for NodeSchool Singapore II",
@@ -79,33 +70,6 @@
     "group_url": "http://www.meetup.com/Singapore-JS/",
     "url": "http://meetup.com/Singapore-JS/events/194480262",
     "formatted_time": "26 Jul, Sat, 2:00 pm"
-  },
-  {
-    "time": 1406025000000,
-    "id": "192318202",
-    "name": "July Meetup",
-    "group_name": "Singapore Salesforce Developer Group",
-    "group_url": "http://www.meetup.com/Singapore-Salesforce-Developer-Group/",
-    "url": "http://meetup.com/Singapore-Salesforce-Developer-Group/events/192318202",
-    "formatted_time": "22 Jul, Tue, 6:30 pm"
-  },
-  {
-    "time": 1406631600000,
-    "id": "193332932",
-    "name": "UX Book Club July 2014: Prototyping - A Practitioner's Guide",
-    "group_name": "IxDA Singapore",
-    "group_url": "http://www.meetup.com/IxDA-Singapore/",
-    "url": "http://meetup.com/IxDA-Singapore/events/193332932",
-    "formatted_time": "29 Jul, Tue, 7:00 pm"
-  },
-  {
-    "time": 1408532400000,
-    "id": "192538552",
-    "name": "NetEng meetup on IGP's",
-    "group_name": "Singapore Network Engineering Meetup",
-    "group_url": "http://www.meetup.com/Singapore-Network-Engineering-Meetup/",
-    "url": "http://meetup.com/Singapore-Network-Engineering-Meetup/events/192538552",
-    "formatted_time": "20 Aug, Wed, 7:00 pm"
   },
   {
     "time": 1405591200000,
@@ -117,24 +81,6 @@
     "formatted_time": "17 Jul, Thu, 6:00 pm"
   },
   {
-    "time": 1406197800000,
-    "id": "193636402",
-    "name": "Postgres Meetup - July",
-    "group_name": "PUGS (Postgres Users Group Singapore)",
-    "group_url": "http://www.meetup.com/PUGS-Postgres-Users-Group-Singapore/",
-    "url": "http://meetup.com/PUGS-Postgres-Users-Group-Singapore/events/193636402",
-    "formatted_time": "24 Jul, Thu, 6:30 pm"
-  },
-  {
-    "time": 1407236400000,
-    "id": "187134762",
-    "name": "Meet and Greet",
-    "group_name": "Swift Singapore",
-    "group_url": "http://www.meetup.com/Swift-Singapore/",
-    "url": "http://meetup.com/Swift-Singapore/events/187134762",
-    "formatted_time": "05 Aug, Tue, 7:00 pm"
-  },
-  {
     "time": 1406350800000,
     "id": "193896182",
     "name": "Introduction to Python Tutorial",
@@ -142,33 +88,6 @@
     "group_url": "http://www.meetup.com/PyLadies-SG/",
     "url": "http://meetup.com/PyLadies-SG/events/193896182",
     "formatted_time": "26 Jul, Sat, 1:00 pm"
-  },
-  {
-    "time": 1417172400000,
-    "id": "111422882",
-    "name": "Hackathon Firefox OS",
-    "group_name": "HTML5Rocks@SG",
-    "group_url": "http://www.meetup.com/HTML5Rocks-SG/",
-    "url": "http://meetup.com/HTML5Rocks-SG/events/111422882",
-    "formatted_time": "28 Nov, Fri, 7:00 pm"
-  },
-  {
-    "time": 1406802600000,
-    "id": "193806862",
-    "name": "ARR and WAP - the good, bad and ugly.",
-    "group_name": "Singapore Lync User Group",
-    "group_url": "http://www.meetup.com/Singapore-Lync-User-Group/",
-    "url": "http://meetup.com/Singapore-Lync-User-Group/events/193806862",
-    "formatted_time": "31 Jul, Thu, 6:30 pm"
-  },
-  {
-    "time": 1407754800000,
-    "id": "188358802",
-    "name": "Lets meet up in August baby !!",
-    "group_name": "Singapore Rasp Pi Enthusiasts",
-    "group_url": "http://www.meetup.com/Singapore-Raspberry-Pi-Enthusiasts-meetup/",
-    "url": "http://meetup.com/Singapore-Raspberry-Pi-Enthusiasts-meetup/events/188358802",
-    "formatted_time": "11 Aug, Mon, 7:00 pm"
   },
   {
     "time": 1405681200000,
@@ -187,24 +106,6 @@
     "group_url": "http://www.meetup.com/Singapore-FileMaker/",
     "url": "http://meetup.com/Singapore-FileMaker/events/177653722",
     "formatted_time": "23 Jul, Wed, 7:00 pm"
-  },
-  {
-    "time": 1411466400000,
-    "id": "183470402",
-    "name": "First Ever TADMeetup Singapore",
-    "group_name": "TADMeetup Singapore",
-    "group_url": "http://www.meetup.com/TADMeetup-Singapore/",
-    "url": "http://meetup.com/TADMeetup-Singapore/events/183470402",
-    "formatted_time": "23 Sep, Tue, 6:00 pm"
-  },
-  {
-    "time": 1406340000000,
-    "id": "186613962",
-    "name": "Learn how to start a digital wallet",
-    "group_name": "Singapore Crypto-Currency Community",
-    "group_url": "http://www.meetup.com/Singapore-Crypto-Currency-Community/",
-    "url": "http://meetup.com/Singapore-Crypto-Currency-Community/events/186613962",
-    "formatted_time": "26 Jul, Sat, 10:00 am"
   },
   {
     "time": 1406163600000,
