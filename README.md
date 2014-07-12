@@ -21,7 +21,7 @@ More filters can be found at: <http://www.meetup.com/meetup_api/docs/find/groups
 
     meetupParams: {
       key: process.env.MEETUP_API_KEY ||
-        '<your_api_key>',
+        '<your_meetup_api_key>',
       country: 'SG',
       category: 34,
       page: 500

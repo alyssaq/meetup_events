@@ -1,7 +1,7 @@
 module.exports = {
   meetupParams: {
     key: process.env.MEETUP_API_KEY ||
-      '496472523e5d5f6a6a3b6815126bf40',
+      '<your_meetup_api_key>',
     country: 'SG',
     category: 34,
     page: 500
