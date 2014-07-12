@@ -37,7 +37,7 @@ Any events from these groups will not be included.
 Array of words in a group name to be blacklisted.
 Group names containing any of these words will not be included.
 
-    blacklistNameWords: ['business', 'networking']
+    blacklistWords: ['business', 'networking']
 
 #### outfile - string
 Optional outfile to save the JSON list of events
