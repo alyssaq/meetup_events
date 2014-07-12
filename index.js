@@ -73,12 +73,16 @@ function getAllMeetupEvents() { //regardless of venue
 function getMeetupEvents() { //events with venues
   return getAllMeetupEvents().then(function(events) {
     var venues = events.map(function(event) {
-      return https_get_json('https://api.meetup.com/2/event/' + event.id + '?only=venue&key=' + config.meetupParams.key);
+      return https_get_json('https://api.meetup.com/2/event/'
+        + event.id
+        + '?fields=venue_visibility&key='
+        + config.meetupParams.key);
     });
 
     return Promise.all(venues).then(function(venues) {
-      var eventsWithVenues = events.filter(function(event, i) {
-        return venues[i].hasOwnProperty('venue');
+      var eventsWithVenues = events.filter(function(evt, i) {
+        return venues[i].hasOwnProperty('venue') ||
+          venues[i].venue_visibility === 'members';
       });
       saveToJson(eventsWithVenues);
       return eventsWithVenues;

@@ -90,6 +90,15 @@
     "formatted_time": "26 Jul, Sat, 1:00 pm"
   },
   {
+    "time": 1406802600000,
+    "id": "193806862",
+    "name": "ARR and WAP - the good, bad and ugly.",
+    "group_name": "Singapore Lync User Group",
+    "group_url": "http://www.meetup.com/Singapore-Lync-User-Group/",
+    "url": "http://meetup.com/Singapore-Lync-User-Group/events/193806862",
+    "formatted_time": "31 Jul, Thu, 6:30 pm"
+  },
+  {
     "time": 1405681200000,
     "id": "194124962",
     "name": "BATS Honeypot Deployment Project",
