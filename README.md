@@ -1,7 +1,7 @@
 # Find Meetup events in your country
 
 Current sample finds tech events (category 34) in Singapore and filters out
-certain groups and works listed in the blacklist.
+certain groups and words listed in the blacklist.
 
 ## Usage
 1. Install dependencies `npm install`
