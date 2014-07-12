@@ -18,6 +18,7 @@ Query parameters to find groups.
 Reponse returns public groups and the next event if available.
 URL to the event can be constructed by the event name and the event id.
 More filters can be found at: <http://www.meetup.com/meetup_api/docs/find/groups/>
+[List of meetup categories](http://www.meetup.com/meetup_api/console/?path=/2/categories)
 
     meetupParams: {
       key: process.env.MEETUP_API_KEY ||
