@@ -2,6 +2,7 @@ var querystring = require('querystring');
 var https = require('https');
 var Promise = require('promise');
 var jf = require('jsonfile');
+var moment = require('moment');
 var config = require('./config');
 
 var meetupQuery = querystring.stringify(config.meetupParams);
@@ -47,6 +48,7 @@ function saveEvents(arr, row) {
   entry.group_url = row.link;
   entry.url = 'http://meetup.com/' + row.urlname + '/events/' + entry.id;
   entry.time = new Date(entry.time).toISOString();
+  entry.formatted_time = moment(new Date(entry.time)).format('DD MMM, ddd, h:mm a');
   events.push(entry);
   console.log(entry.group_name + ' -- ' + entry.name + ' - ' + entry.url);
 }

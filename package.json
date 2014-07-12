@@ -6,6 +6,7 @@
   "author": "Alyssa Quek",
   "license": "MIT",
   "dependencies": {
+    "moment": "^2.7.0",
     "promise": "^5.0.0"
   }
 }
