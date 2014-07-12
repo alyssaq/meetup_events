@@ -33,10 +33,9 @@ function isValidGroup(row) {
   var blacklistWords = config.blacklistWords || [];
   var blacklistRE = new RegExp(blacklistWords.join('|'), 'i');
 
-  // Enforce country filter. Meetup adds JB groups into SG
   return blacklistWords.length === 0 ? true : !row.name.match(blacklistRE) &&
-         !blacklistGroups.some(function(id) { return row.id === id })
-         && row.country === (config.meetupParams.country || row.country);
+         !blacklistGroups.some(function(id) { return row.id === id }) &&
+         row.country === (config.meetupParams.country || row.country);
 }
 
 function saveEvents(arr, row) {
@@ -62,19 +61,22 @@ function saveToJson(data) {
 function getAllMeetupEvents() { //regardless of venue
   var url = 'https://api.meetup.com/2/groups?' +
     querystring.stringify(config.meetupParams);
+
   return https_get_json(url).then(function(data) {
     console.log('Fetched ' + data.results.length + ' rows');
     events = [];
     data.results
       .filter(isValidGroup)
       .reduce(saveEvents, events);
-    console.log('Fetched ' + events.length + ' events');
     return events;
+  }).catch(function(err) {
+    console.error('Error getAllMeetupEvents():' + err);
   });
 }
 
 function getMeetupEvents() { //events with venues
   return getAllMeetupEvents().then(function(events) {
+    console.log('Fetched ' + events.length + ' events');
     var venues = events.map(function(event) {
       return https_get_json('https://api.meetup.com/2/event/'
         + event.id
@@ -90,6 +92,8 @@ function getMeetupEvents() { //events with venues
       console.log(eventsWithVenues.length + ' events with venues');
       saveToJson(eventsWithVenues);
       return eventsWithVenues;
+    }).catch(function(err) {
+      console.error('Error getMeetupEvents():' + err);
     });
   });
 }

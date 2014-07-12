@@ -1,16 +1,8 @@
 [
   {
-    "time": 1405509300000,
-    "id": "193467102",
-    "name": "DataScience SG Meetup - HR Analytics",
-    "group_name": "DataScience SG",
-    "group_url": "http://www.meetup.com/DataScience-SG-Singapore/",
-    "url": "http://meetup.com/DataScience-SG-Singapore/events/193467102",
-    "formatted_time": "16 Jul, Wed, 7:15 pm"
-  },
-  {
-    "time": 1405334700000,
+    "utc_offset": 28800000,
     "id": "193625622",
+    "time": 1405334700000,
     "name": "Technical workshop - Revolution Analytics and Cloudera",
     "group_name": "R User Group - Singapore (RUGS)",
     "group_url": "http://www.meetup.com/R-User-Group-SG/",
@@ -18,17 +10,9 @@
     "formatted_time": "14 Jul, Mon, 6:45 pm"
   },
   {
-    "time": 1405422000000,
-    "id": "192768632",
-    "name": "July Meetup",
-    "group_name": "Singapore Ruby Group",
-    "group_url": "http://www.meetup.com/Singapore-Ruby-Group/",
-    "url": "http://meetup.com/Singapore-Ruby-Group/events/192768632",
-    "formatted_time": "15 Jul, Tue, 7:00 pm"
-  },
-  {
-    "time": 1406613600000,
+    "utc_offset": 28800000,
     "id": "194446172",
+    "time": 1406613600000,
     "name": "Coding Dojo: Legacy Code (C# and Java)",
     "group_name": "Agile Singapore",
     "group_url": "http://www.meetup.com/Agile-Singapore/",
@@ -36,35 +20,19 @@
     "formatted_time": "29 Jul, Tue, 2:00 pm"
   },
   {
-    "time": 1406026800000,
-    "id": "190871092",
-    "name": "Learning Meteor Together SG - Discover Meteor Meetup #2",
-    "group_name": "Meteor Singapore",
-    "group_url": "http://www.meetup.com/Meteor-Singapore/",
-    "url": "http://meetup.com/Meteor-Singapore/events/190871092",
-    "formatted_time": "22 Jul, Tue, 7:00 pm"
-  },
-  {
+    "utc_offset": 28800000,
+    "id": "192768632",
     "time": 1405422000000,
-    "id": "188059562",
-    "name": "GoSG July Meetup",
-    "group_name": "GoSG",
-    "group_url": "http://www.meetup.com/golangsg/",
-    "url": "http://meetup.com/golangsg/events/188059562",
+    "name": "July Meetup",
+    "group_name": "Singapore Ruby Group",
+    "group_url": "http://www.meetup.com/Singapore-Ruby-Group/",
+    "url": "http://meetup.com/Singapore-Ruby-Group/events/192768632",
     "formatted_time": "15 Jul, Tue, 7:00 pm"
   },
   {
-    "time": 1405594800000,
-    "id": "192152092",
-    "name": "July meetup",
-    "group_name": "Bitcoin Singapore Meetup Group",
-    "group_url": "http://www.meetup.com/BitcoinSingapore/",
-    "url": "http://meetup.com/BitcoinSingapore/events/192152092",
-    "formatted_time": "17 Jul, Thu, 7:00 pm"
-  },
-  {
-    "time": 1406354400000,
+    "utc_offset": 28800000,
     "id": "194480262",
+    "time": 1406354400000,
     "name": "Become a mentor for NodeSchool Singapore II",
     "group_name": "SingaporeJS",
     "group_url": "http://www.meetup.com/Singapore-JS/",
@@ -72,44 +40,59 @@
     "formatted_time": "26 Jul, Sat, 2:00 pm"
   },
   {
-    "time": 1405591200000,
-    "id": "192817812",
-    "name": "feedback from June's webRTC events in USA.",
-    "group_name": "Singapore WebRTC Meetup",
-    "group_url": "http://www.meetup.com/Singapore-WebRTC-Meetup/",
-    "url": "http://meetup.com/Singapore-WebRTC-Meetup/events/192817812",
-    "formatted_time": "17 Jul, Thu, 6:00 pm"
+    "utc_offset": 28800000,
+    "id": "194553532",
+    "time": 1405749600000,
+    "name": "Let's meetup and discuss Bitcoin",
+    "group_name": "Singapore Bitcoin Meetups",
+    "group_url": "http://www.meetup.com/Singapore-Bitcoin-Meetups/",
+    "url": "http://meetup.com/Singapore-Bitcoin-Meetups/events/194553532",
+    "formatted_time": "19 Jul, Sat, 2:00 pm"
   },
   {
-    "time": 1406350800000,
-    "id": "193896182",
-    "name": "Introduction to Python Tutorial",
-    "group_name": "PyLadies SG",
-    "group_url": "http://www.meetup.com/PyLadies-SG/",
-    "url": "http://meetup.com/PyLadies-SG/events/193896182",
-    "formatted_time": "26 Jul, Sat, 1:00 pm"
+    "utc_offset": 28800000,
+    "id": "192152092",
+    "time": 1405594800000,
+    "name": "July meetup",
+    "group_name": "Bitcoin Singapore Meetup Group",
+    "group_url": "http://www.meetup.com/BitcoinSingapore/",
+    "url": "http://meetup.com/BitcoinSingapore/events/192152092",
+    "formatted_time": "17 Jul, Thu, 7:00 pm"
   },
   {
-    "time": 1406802600000,
-    "id": "193806862",
-    "name": "ARR and WAP - the good, bad and ugly.",
-    "group_name": "Singapore Lync User Group",
-    "group_url": "http://www.meetup.com/Singapore-Lync-User-Group/",
-    "url": "http://meetup.com/Singapore-Lync-User-Group/events/193806862",
-    "formatted_time": "31 Jul, Thu, 6:30 pm"
+    "utc_offset": 28800000,
+    "id": "190871092",
+    "time": 1406026800000,
+    "name": "Learning Meteor Together SG - Discover Meteor Meetup #2",
+    "group_name": "Meteor Singapore",
+    "group_url": "http://www.meetup.com/Meteor-Singapore/",
+    "url": "http://meetup.com/Meteor-Singapore/events/190871092",
+    "formatted_time": "22 Jul, Tue, 7:00 pm"
   },
   {
-    "time": 1405681200000,
-    "id": "194124962",
-    "name": "BATS Honeypot Deployment Project",
-    "group_name": "BAT (beer and tech)",
-    "group_url": "http://www.meetup.com/BAT-beer-and-tech/",
-    "url": "http://meetup.com/BAT-beer-and-tech/events/194124962",
-    "formatted_time": "18 Jul, Fri, 7:00 pm"
+    "utc_offset": 28800000,
+    "id": "193467102",
+    "time": 1405509300000,
+    "name": "DataScience SG Meetup - HR Analytics",
+    "group_name": "DataScience SG",
+    "group_url": "http://www.meetup.com/DataScience-SG-Singapore/",
+    "url": "http://meetup.com/DataScience-SG-Singapore/events/193467102",
+    "formatted_time": "16 Jul, Wed, 7:15 pm"
   },
   {
-    "time": 1406113200000,
+    "utc_offset": 28800000,
+    "id": "192382432",
+    "time": 1406163600000,
+    "name": "One Day Conference on DevOps",
+    "group_name": "Singapore Cloud, Big Data, DevOps Meetups",
+    "group_url": "http://www.meetup.com/Singapore-Cloud-Big-Data-DevOps-Meetups/",
+    "url": "http://meetup.com/Singapore-Cloud-Big-Data-DevOps-Meetups/events/192382432",
+    "formatted_time": "24 Jul, Thu, 9:00 am"
+  },
+  {
+    "utc_offset": 28800000,
     "id": "177653722",
+    "time": 1406113200000,
     "name": "Singapore FileMaker Group July Meeting",
     "group_name": "Singapore FileMaker Group",
     "group_url": "http://www.meetup.com/Singapore-FileMaker/",
@@ -117,12 +100,53 @@
     "formatted_time": "23 Jul, Wed, 7:00 pm"
   },
   {
-    "time": 1406163600000,
-    "id": "192382432",
-    "name": "One Day Conference on DevOps",
-    "group_name": "Singapore Cloud, Big Data, DevOps Meetups",
-    "group_url": "http://www.meetup.com/Singapore-Cloud-Big-Data-DevOps-Meetups/",
-    "url": "http://meetup.com/Singapore-Cloud-Big-Data-DevOps-Meetups/events/192382432",
-    "formatted_time": "24 Jul, Thu, 9:00 am"
+    "utc_offset": 28800000,
+    "id": "194124962",
+    "time": 1405681200000,
+    "name": "BATS Honeypot Deployment Project",
+    "group_name": "BAT (beer and tech)",
+    "group_url": "http://www.meetup.com/BAT-beer-and-tech/",
+    "url": "http://meetup.com/BAT-beer-and-tech/events/194124962",
+    "formatted_time": "18 Jul, Fri, 7:00 pm"
+  },
+  {
+    "utc_offset": 28800000,
+    "id": "188059562",
+    "time": 1405422000000,
+    "name": "GoSG July Meetup",
+    "group_name": "GoSG",
+    "group_url": "http://www.meetup.com/golangsg/",
+    "url": "http://meetup.com/golangsg/events/188059562",
+    "formatted_time": "15 Jul, Tue, 7:00 pm"
+  },
+  {
+    "utc_offset": 28800000,
+    "id": "193896182",
+    "time": 1406350800000,
+    "name": "Introduction to Python Tutorial",
+    "group_name": "PyLadies SG",
+    "group_url": "http://www.meetup.com/PyLadies-SG/",
+    "url": "http://meetup.com/PyLadies-SG/events/193896182",
+    "formatted_time": "26 Jul, Sat, 1:00 pm"
+  },
+  {
+    "utc_offset": 28800000,
+    "id": "192817812",
+    "time": 1405591200000,
+    "name": "feedback from June's webRTC events in USA.",
+    "group_name": "Singapore WebRTC Meetup",
+    "group_url": "http://www.meetup.com/Singapore-WebRTC-Meetup/",
+    "url": "http://meetup.com/Singapore-WebRTC-Meetup/events/192817812",
+    "formatted_time": "17 Jul, Thu, 6:00 pm"
+  },
+  {
+    "utc_offset": 28800000,
+    "id": "193806862",
+    "time": 1406802600000,
+    "name": "ARR and WAP - the good, bad and ugly.",
+    "group_name": "Singapore Lync User Group",
+    "group_url": "http://www.meetup.com/Singapore-Lync-User-Group/",
+    "url": "http://meetup.com/Singapore-Lync-User-Group/events/193806862",
+    "formatted_time": "31 Jul, Thu, 6:30 pm"
   }
 ]
