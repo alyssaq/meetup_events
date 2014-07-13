@@ -5,7 +5,7 @@ var jf = require('jsonfile');
 var moment = require('moment');
 var config = require('./config');
 
-function https_get_json(url) {
+function requestJson(url) {
   console.log('Getting data from ' + url);
   return new Promise(function (resolve, reject) {
     https.get(url, function (res) {
@@ -62,7 +62,7 @@ function getAllMeetupEvents() { //regardless of venue
   var url = 'https://api.meetup.com/2/groups?' +
     querystring.stringify(config.meetupParams);
 
-  return https_get_json(url).then(function(data) {
+  return requestJson(url).then(function(data) {
     console.log('Fetched ' + data.results.length + ' rows');
     events = [];
     data.results
@@ -78,7 +78,7 @@ function getMeetupEvents() { //events with venues
   return getAllMeetupEvents().then(function(events) {
     console.log('Fetched ' + events.length + ' events');
     var venues = events.map(function(event) {
-      return https_get_json('https://api.meetup.com/2/event/'
+      return requestJson('https://api.meetup.com/2/event/'
         + event.id
         + '?fields=venue_visibility&key='
         + config.meetupParams.key);
