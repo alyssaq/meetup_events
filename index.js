@@ -45,7 +45,7 @@ function saveEvents(arr, row) {
   entry.group_name = row.name;
   entry.group_url = row.link;
   entry.url = 'http://meetup.com/' + row.urlname + '/events/' + entry.id;
-  entry.formatted_time = moment(new Date(entry.time)).format('DD MMM, ddd, h:mm a');
+  entry.formatted_time = moment.utc(entry.time + entry.utc_offset).format('DD MMM, ddd, h:mm a');
   events.push(entry);
   //console.log(entry.group_name + ' -- ' + entry.name + ' - ' + entry.url);
 }
