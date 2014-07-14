@@ -58,6 +58,28 @@ function saveToJson(data) {
   console.log('JSON file saved at: ' + config.outfile)
 }
 
+function waitAllPromises(arr) {
+  if (arr.length === 0) return resolve([]);
+
+  return new Promise(function (resolve, reject) {
+    var numResolved = 0;
+    function save(i, val) {
+      arr[i] = val
+      if (++numResolved === arr.length) {
+        resolve(arr);
+      }
+    }
+
+    arr.forEach(function(item, i) {
+      item.then(function(val) {
+        save(i, val);
+      }).catch(function(err) {
+        save(i, {'error': err}); // resolve errors
+      });
+    });
+  });
+}
+
 function getAllMeetupEvents() { //regardless of venue
   var url = 'https://api.meetup.com/2/groups?' +
     querystring.stringify(config.meetupParams);
@@ -84,7 +106,7 @@ function getMeetupEvents() { //events with venues
         + config.meetupParams.key);
     });
 
-    return Promise.all(venues).then(function(venues) {
+    return waitAllPromises(venues).then(function(venues) {
       var eventsWithVenues = events.filter(function(evt, i) {
         return venues[i].hasOwnProperty('venue') ||
           venues[i].venue_visibility === 'members';
@@ -93,7 +115,7 @@ function getMeetupEvents() { //events with venues
       saveToJson(eventsWithVenues);
       return eventsWithVenues;
     }).catch(function(err) {
-      console.error('Error getMeetupEvents():' + err);
+      console.error('Error getMeetupEvents(): ' + err);
     });
   });
 }

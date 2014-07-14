@@ -61,6 +61,16 @@
   },
   {
     "utc_offset": 28800000,
+    "id": "194790032",
+    "time": 1406718000000,
+    "name": "July Meetup",
+    "group_name": "Singapore Android Developers",
+    "group_url": "http://www.meetup.com/Singapore-Android-Developers/",
+    "url": "http://meetup.com/Singapore-Android-Developers/events/194790032",
+    "formatted_time": "30 Jul, Wed, 7:00 pm"
+  },
+  {
+    "utc_offset": 28800000,
     "id": "190871092",
     "time": 1406026800000,
     "name": "Learning Meteor Together SG - Discover Meteor Meetup #2",
