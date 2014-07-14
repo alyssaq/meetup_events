@@ -65,3 +65,7 @@ Optional outfile to save the JSON list of events
         "url": "http://meetup.com/R-User-Group-SG/events/193625622"
       }
     ]
+
+## License
+[MIT](http://alyssaq.github.io/mit-license/)
+

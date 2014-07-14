@@ -4,6 +4,7 @@
   "description": "Meetup events in your country",
   "main": "index.js",
   "author": "Alyssa Quek",
+  "repository": "https://github.com/alyssaq/meetup_events",
   "license": "MIT",
   "dependencies": {
     "moment": "^2.7.0",
