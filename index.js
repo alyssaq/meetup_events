@@ -4,6 +4,9 @@ var Promise = require('promise');
 var jf = require('jsonfile');
 var moment = require('moment');
 var config = require('./config');
+var events = []; // for storing all the meetup events
+
+// private
 
 function requestJson(url) {
   console.log('Getting data from ' + url);
@@ -38,13 +41,13 @@ function isValidGroup(row) {
          row.country === (config.meetupParams.country || row.country);
 }
 
-function saveEvents(arr, row) {
-  if (!(row.next_event && row.next_event.time)) return
+function addEvent(event) {
+  if (!(event.next_event && event.next_event.time)) return
 
-  var entry = row.next_event;
-  entry.group_name = row.name;
-  entry.group_url = row.link;
-  entry.url = 'http://meetup.com/' + row.urlname + '/events/' + entry.id;
+  var entry = event.next_event;
+  entry.group_name = event.name;
+  entry.group_url = event.link;
+  entry.url = 'http://meetup.com/' + event.urlname + '/events/' + entry.id;
   entry.formatted_time = moment.utc(entry.time + entry.utc_offset).format('DD MMM, ddd, h:mm a');
   events.push(entry);
   //console.log(entry.group_name + ' -- ' + entry.name + ' - ' + entry.url);
@@ -80,16 +83,15 @@ function waitAllPromises(arr) {
   });
 }
 
+// public
+
 function getAllMeetupEvents() { //regardless of venue
   var url = 'https://api.meetup.com/2/groups?' +
     querystring.stringify(config.meetupParams);
 
   return requestJson(url).then(function(data) {
     console.log('Fetched ' + data.results.length + ' rows');
-    events = [];
-    data.results
-      .filter(isValidGroup)
-      .reduce(saveEvents, events);
+    data.results.filter(isValidGroup).forEach(addEvent);
     return events;
   }).catch(function(err) {
     console.error('Error getAllMeetupEvents():' + err);
@@ -120,9 +122,9 @@ function getMeetupEvents() { //events with venues
   });
 }
 
+getMeetupEvents();
+
 module.exports = {
   getAllMeetupEvents: getAllMeetupEvents,
   getMeetupEvents: getMeetupEvents
 }
-
-getMeetupEvents();
