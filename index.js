@@ -3,13 +3,15 @@ var https = require('https');
 var Promise = require('promise');
 var jf = require('jsonfile');
 var moment = require('moment');
+var argv = require('minimist')(process.argv.slice(2));
 var config = require('./config');
 var events = []; // for storing all the meetup events
+
 
 // private
 
 function requestJson(url) {
-  console.log('Getting data from ' + url);
+  // console.log('Getting data from ' + url);
   return new Promise(function (resolve, reject) {
     https.get(url, function (res) {
       var buffer = [];
@@ -54,11 +56,17 @@ function addEvent(event) {
 }
 
 function saveToJson(data) {
-  if (!config.outfile) return
-  jf.writeFile(config.outfile, data, function(err) {
-    if (err) console.error(err);
-  })
-  console.log('JSON file saved at: ' + config.outfile)
+  var outputFile = argv['o'] || config.outfile;
+
+  if (outputFile) {
+    jf.writeFile(outputFile, data, function(err) {
+      if (err) console.error(err);
+    })
+
+    console.log('JSON file saved at: ' + outputFile)
+  } else {
+    process.stdout.write(JSON.stringify(data));
+  }
 }
 
 function waitAllPromises(arr) {
