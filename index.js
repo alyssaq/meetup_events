@@ -11,7 +11,10 @@ var events = []; // for storing all the meetup events
 // private
 
 function requestJson(url) {
-  // console.log('Getting data from ' + url);
+  if(argv['v']) {
+    console.log('Getting data from ' + url);
+  };
+
   return new Promise(function (resolve, reject) {
     https.get(url, function (res) {
       var buffer = [];
@@ -19,7 +22,10 @@ function requestJson(url) {
       res.on('end', function () {
         var text = buffer.join('');
         var json = JSON.parse(text);
+
         if (res.statusCode < 400) {
+          resolve(json);
+        } else if (res.statusCode === 404) {
           resolve(json);
         } else {
           console.error('Err! HTTP status code:', res.statusCode, url);
@@ -63,7 +69,9 @@ function saveToJson(data) {
       if (err) console.error(err);
     })
 
-    console.log('JSON file saved at: ' + outputFile)
+    if(argv['v']) {
+      console.log('JSON file saved at: ' + outputFile)
+    };
   } else {
     process.stdout.write(JSON.stringify(data));
   }
@@ -98,7 +106,10 @@ function getAllMeetupEvents() { //regardless of venue
     querystring.stringify(config.meetupParams);
 
   return requestJson(url).then(function(data) {
-    console.log('Fetched ' + data.results.length + ' rows');
+    if(argv['v']) {
+      console.log('Fetched ' + data.results.length + ' rows');
+    };
+
     data.results.filter(isValidGroup).forEach(addEvent);
     return events;
   }).catch(function(err) {
@@ -108,7 +119,10 @@ function getAllMeetupEvents() { //regardless of venue
 
 function getMeetupEvents() { //events with venues
   return getAllMeetupEvents().then(function(events) {
-    console.log('Fetched ' + events.length + ' events');
+    if(argv['v']) {
+      console.log('Fetched ' + events.length + ' events');
+    };
+
     var venues = events.map(function(event) {
       return requestJson('https://api.meetup.com/2/event/'
         + event.id
@@ -121,7 +135,11 @@ function getMeetupEvents() { //events with venues
         return venues[i].hasOwnProperty('venue') ||
           venues[i].venue_visibility === 'members';
       });
-      console.log(eventsWithVenues.length + ' events with venues');
+
+      if(argv['v']) {
+        console.log(eventsWithVenues.length + ' events with venues');
+      };
+
       saveToJson(eventsWithVenues);
       return eventsWithVenues;
     }).catch(function(err) {
