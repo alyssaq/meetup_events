@@ -11,7 +11,6 @@ certain groups and words listed in the blacklist.
 
     MEETUP_API_KEY=<key> node index.js                # send events to stdout or to a file (if `outfile` key exist in config.js)
     MEETUP_API_KEY=<key> node index.js -o foo.json    # save events in foo.json
-    MEETUP_API_KEY=<key> node index.js -v             # verbose - show debug messages
 
 ## Configurations
 Sample in `config.js`
@@ -21,7 +20,6 @@ The remaining configs can be safely deleted if not required.
 ## Command line arguments
 
     -o  filename to save the events into
-    -v  verbose
 
 #### meetupParams - object
 Query parameters to find groups.

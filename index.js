@@ -9,10 +9,6 @@ var config = require('./config');
 // private
 
 function requestJson(url) {
-  if(argv['v']) {
-    console.log('Getting data from ' + url);
-  };
-
   return new Promise(function (resolve, reject) {
     https.get(url, function (res) {
       var buffer = [];
@@ -53,10 +49,6 @@ function saveToJson(data) {
     jf.writeFile(outputFile, data, function(err) {
       if (err) console.error(err);
     })
-
-    if(argv['v']) {
-      console.log('JSON file saved at: ' + outputFile)
-    };
   } else {
     process.stdout.write(JSON.stringify(data));
   }
@@ -108,10 +100,6 @@ function getAllMeetupEvents() { //regardless of venue
     querystring.stringify(config.meetupParams);
 
   return requestJson(url).then(function(data) {
-    if(argv['v']) {
-      console.log('Fetched ' + data.results.length + ' rows');
-    };
-
     return data.results.filter(isValidGroup).reduce(addEvent, []);
   }).catch(function(err) {
     console.error('Error getAllMeetupEvents():' + err);
@@ -120,10 +108,6 @@ function getAllMeetupEvents() { //regardless of venue
 
 function getMeetupEvents() { //events with venues
   return getAllMeetupEvents().then(function(events) {
-    if(argv['v']) {
-      console.log('Fetched ' + events.length + ' events');
-    };
-
     var venues = events.map(function(event) {
       return requestJson('https://api.meetup.com/2/event/'
         + event.id
@@ -136,10 +120,6 @@ function getMeetupEvents() { //events with venues
         return venues[i].hasOwnProperty('venue') ||
           venues[i].venue_visibility === 'members';
       });
-
-      if(argv['v']) {
-        console.log(eventsWithVenues.length + ' events with venues');
-      };
 
       saveToJson(eventsWithVenues);
       return eventsWithVenues;
