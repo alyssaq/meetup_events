@@ -5,8 +5,6 @@ var jf = require('jsonfile');
 var moment = require('moment');
 var argv = require('minimist')(process.argv.slice(2));
 var config = require('./config');
-var events = []; // for storing all the meetup events
-
 
 // private
 
@@ -49,17 +47,6 @@ function isValidGroup(row) {
          row.country === (config.meetupParams.country || row.country);
 }
 
-function addEvent(event) {
-  if (!(event.next_event && event.next_event.time)) return
-
-  var entry = event.next_event;
-  entry.group_name = event.name;
-  entry.group_url = event.link;
-  entry.url = 'http://meetup.com/' + event.urlname + '/events/' + entry.id;
-  entry.formatted_time = moment.utc(entry.time + entry.utc_offset).format('DD MMM, ddd, h:mm a');
-  events.push(entry);
-  //console.log(entry.group_name + ' -- ' + entry.name + ' - ' + entry.url);
-}
 
 function saveToJson(data) {
   var outputFile = argv['o'] || config.outfile;
@@ -99,6 +86,23 @@ function waitAllPromises(arr) {
   });
 }
 
+// omitted the last two arguments to the reduce function since they are not being used.
+function addEvent(events, event) {
+  if (!(event.next_event && event.next_event.time)) {
+    return events;
+  }
+
+  var entry = event.next_event;
+
+  entry.group_name = event.name;
+  entry.group_url = event.link;
+  entry.url = 'http://meetup.com/' + event.urlname + '/events/' + entry.id;
+  entry.formatted_time = moment.utc(entry.time + entry.utc_offset).format('DD MMM, ddd, h:mm a');
+  events.push(entry);
+
+  return events;
+}
+
 // public
 
 function getAllMeetupEvents() { //regardless of venue
@@ -110,8 +114,7 @@ function getAllMeetupEvents() { //regardless of venue
       console.log('Fetched ' + data.results.length + ' rows');
     };
 
-    data.results.filter(isValidGroup).forEach(addEvent);
-    return events;
+    return data.results.filter(isValidGroup).reduce(addEvent, []);
   }).catch(function(err) {
     console.error('Error getAllMeetupEvents():' + err);
   });
