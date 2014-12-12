@@ -23,8 +23,6 @@ function requestJson(url) {
 
         if (res.statusCode < 400) {
           resolve(json);
-        } else if (res.statusCode === 404) {
-          resolve(json);
         } else {
           console.error('Err! HTTP status code:', res.statusCode, url);
           reject(Error(text));
