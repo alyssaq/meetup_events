@@ -3,15 +3,23 @@
 Current sample finds tech events (category 34) in Singapore and filters out
 certain groups and words listed in the blacklist.
 
-## Usage
+## Setup
 1. Install dependencies `npm install`
 1. Open `config.js` and add your [meetup API key](https://secure.meetup.com/meetup_api/key/)
-1. Run `node index.js`. Events will be saved in `events.json` unless configured.
+
+## Usage
+
+    MEETUP_API_KEY=<key> node index.js                # send events to stdout or to a file (if `outfile` key exist in config.js)
+    MEETUP_API_KEY=<key> node index.js -o foo.json    # save events in foo.json
 
 ## Configurations
 Sample in `config.js`
 The only required configuration is your `meetup API key`.
 The remaining configs can be safely deleted if not required.
+
+## Command line arguments
+
+    -o  filename to save the events into
 
 #### meetupParams - object
 Query parameters to find groups.

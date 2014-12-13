@@ -3,10 +3,12 @@ var https = require('https');
 var Promise = require('promise');
 var jf = require('jsonfile');
 var moment = require('moment');
+var argv = require('minimist')(process.argv.slice(2));
 var config = require('./config');
 
+// private
+
 function requestJson(url) {
-  console.log('Getting data from ' + url);
   return new Promise(function (resolve, reject) {
     https.get(url, function (res) {
       var buffer = [];
@@ -14,6 +16,7 @@ function requestJson(url) {
       res.on('end', function () {
         var text = buffer.join('');
         var json = JSON.parse(text);
+
         if (res.statusCode < 400) {
           resolve(json);
         } else {
@@ -38,24 +41,17 @@ function isValidGroup(row) {
          row.country === (config.meetupParams.country || row.country);
 }
 
-function saveEvents(arr, row) {
-  if (!(row.next_event && row.next_event.time)) return
-
-  var entry = row.next_event;
-  entry.group_name = row.name;
-  entry.group_url = row.link;
-  entry.url = 'http://meetup.com/' + row.urlname + '/events/' + entry.id;
-  entry.formatted_time = moment.utc(entry.time + entry.utc_offset).format('DD MMM, ddd, h:mm a');
-  events.push(entry);
-  //console.log(entry.group_name + ' -- ' + entry.name + ' - ' + entry.url);
-}
 
 function saveToJson(data) {
-  if (!config.outfile) return
-  jf.writeFile(config.outfile, data, function(err) {
-    if (err) console.error(err);
-  })
-  console.log('JSON file saved at: ' + config.outfile)
+  var outputFile = argv['o'] || config.outfile;
+
+  if (outputFile) {
+    jf.writeFile(outputFile, data, function(err) {
+      if (err) console.error(err);
+    })
+  } else {
+    process.stdout.write(JSON.stringify(data));
+  }
 }
 
 function waitAllPromises(arr) {
@@ -80,17 +76,31 @@ function waitAllPromises(arr) {
   });
 }
 
+// omitted the last two arguments to the reduce function since they are not being used.
+function addEvent(events, event) {
+  if (!(event.next_event && event.next_event.time)) {
+    return events;
+  }
+
+  var entry = event.next_event;
+
+  entry.group_name = event.name;
+  entry.group_url = event.link;
+  entry.url = 'http://meetup.com/' + event.urlname + '/events/' + entry.id;
+  entry.formatted_time = moment.utc(entry.time + entry.utc_offset).format('DD MMM, ddd, h:mm a');
+  events.push(entry);
+
+  return events;
+}
+
+// public
+
 function getAllMeetupEvents() { //regardless of venue
   var url = 'https://api.meetup.com/2/groups?' +
     querystring.stringify(config.meetupParams);
 
   return requestJson(url).then(function(data) {
-    console.log('Fetched ' + data.results.length + ' rows');
-    events = [];
-    data.results
-      .filter(isValidGroup)
-      .reduce(saveEvents, events);
-    return events;
+    return data.results.filter(isValidGroup).reduce(addEvent, []);
   }).catch(function(err) {
     console.error('Error getAllMeetupEvents():' + err);
   });
@@ -98,7 +108,6 @@ function getAllMeetupEvents() { //regardless of venue
 
 function getMeetupEvents() { //events with venues
   return getAllMeetupEvents().then(function(events) {
-    console.log('Fetched ' + events.length + ' events');
     var venues = events.map(function(event) {
       return requestJson('https://api.meetup.com/2/event/'
         + event.id
@@ -111,7 +120,7 @@ function getMeetupEvents() { //events with venues
         return venues[i].hasOwnProperty('venue') ||
           venues[i].venue_visibility === 'members';
       });
-      console.log(eventsWithVenues.length + ' events with venues');
+
       saveToJson(eventsWithVenues);
       return eventsWithVenues;
     }).catch(function(err) {
@@ -120,9 +129,9 @@ function getMeetupEvents() { //events with venues
   });
 }
 
+getMeetupEvents();
+
 module.exports = {
   getAllMeetupEvents: getAllMeetupEvents,
   getMeetupEvents: getMeetupEvents
 }
-
-getMeetupEvents();
